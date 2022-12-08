@@ -14,13 +14,13 @@ const FiuberNavbar = () => {
       </Navbar.Brand>
       <Nav className='me-auto'>
         <NavDropdown title='Documentación Técnica' id='collasible-nav-dropdown'>
-          <NavDropdown.Item href='/fiuber-documentacion/installation'>Instalaci&oacute;n y Configuraci&oacute;n</NavDropdown.Item>
-          <NavDropdown.Item href='/fiuber-documentacion/architecture'>Definici&oacute;n de Arquitectura</NavDropdown.Item>
-          <NavDropdown.Item href='/fiuber-documentacion/rest'>Especificaci&oacute;n de API REST</NavDropdown.Item>
+          <NavDropdown.Item href='/installation'>Instalaci&oacute;n y Configuraci&oacute;n</NavDropdown.Item>
+          <NavDropdown.Item href='/architecture'>Definici&oacute;n de Arquitectura</NavDropdown.Item>
+          <NavDropdown.Item href='/rest'>Especificaci&oacute;n de API REST</NavDropdown.Item>
         </NavDropdown>
         <NavDropdown title='Guías de Usuario' id='collasible-nav-dropdown'>
-          <NavDropdown.Item href='/fiuber-documentacion/mobile'>Fiuber Mobile</NavDropdown.Item>
-          <NavDropdown.Item href='/fiuber-documentacion/backoffice'>Fiuber Backoffice</NavDropdown.Item>
+          <NavDropdown.Item href='/mobile'>Fiuber Mobile</NavDropdown.Item>
+          <NavDropdown.Item href='/backoffice'>Fiuber Backoffice</NavDropdown.Item>
         </NavDropdown>
       </Nav>
     </Navbar>
