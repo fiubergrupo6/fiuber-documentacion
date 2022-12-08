@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fiuber-documentacion/static/css/main.1e8f5fdf.css",
-    "main.js": "/fiuber-documentacion/static/js/main.bdc14229.js",
+    "main.js": "/fiuber-documentacion/static/js/main.f801168e.js",
     "static/js/466.fc2e86f2.chunk.js": "/fiuber-documentacion/static/js/466.fc2e86f2.chunk.js",
     "static/js/338.375bfed2.chunk.js": "/fiuber-documentacion/static/js/338.375bfed2.chunk.js",
     "static/js/148.613c7d17.chunk.js": "/fiuber-documentacion/static/js/148.613c7d17.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/787.2083ad79.chunk.js": "/fiuber-documentacion/static/js/787.2083ad79.chunk.js",
     "index.html": "/fiuber-documentacion/index.html",
     "main.1e8f5fdf.css.map": "/fiuber-documentacion/static/css/main.1e8f5fdf.css.map",
-    "main.bdc14229.js.map": "/fiuber-documentacion/static/js/main.bdc14229.js.map",
+    "main.f801168e.js.map": "/fiuber-documentacion/static/js/main.f801168e.js.map",
     "466.fc2e86f2.chunk.js.map": "/fiuber-documentacion/static/js/466.fc2e86f2.chunk.js.map",
     "338.375bfed2.chunk.js.map": "/fiuber-documentacion/static/js/338.375bfed2.chunk.js.map",
     "148.613c7d17.chunk.js.map": "/fiuber-documentacion/static/js/148.613c7d17.chunk.js.map",
@@ -20,6 +20,6 @@
   },
   "entrypoints": [
     "static/css/main.1e8f5fdf.css",
-    "static/js/main.bdc14229.js"
+    "static/js/main.f801168e.js"
   ]
 }
