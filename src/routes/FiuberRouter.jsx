@@ -12,11 +12,11 @@ const FiuberRouter = () => {
     <Router>
       <Suspense fallback={<h1 className='text-center'>Loading...</h1>}>
         <Routes>
-          <Route path='/installation' element={<GuideInstallation />} />
-          <Route path='/architecture' element={<GuideArchitecture />} />
-          <Route path='/rest' element={<GuideRest />} />
-          <Route path='/mobile' element={<GuideMobile />} />
-          <Route path='/backoffice' element={<GuideBackoffice />} />
+          <Route path='/fiuber-documentacion/installation' element={<GuideInstallation />} />
+          <Route path='/fiuber-documentacion/architecture' element={<GuideArchitecture />} />
+          <Route path='/fiuber-documentacion/rest' element={<GuideRest />} />
+          <Route path='/fiuber-documentacion/mobile' element={<GuideMobile />} />
+          <Route path='/fiuber-documentacion/backoffice' element={<GuideBackoffice />} />
         </Routes>
       </Suspense>
     </Router>

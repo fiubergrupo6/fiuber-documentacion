@@ -1,16 +1,25 @@
 {
   "files": {
-    "main.css": "/fiuber-documentacion/static/css/main.073c9b0a.css",
-    "main.js": "/fiuber-documentacion/static/js/main.73a31520.js",
+    "main.css": "/fiuber-documentacion/static/css/main.1e8f5fdf.css",
+    "main.js": "/fiuber-documentacion/static/js/main.ccaed489.js",
+    "static/js/466.fc2e86f2.chunk.js": "/fiuber-documentacion/static/js/466.fc2e86f2.chunk.js",
+    "static/js/338.375bfed2.chunk.js": "/fiuber-documentacion/static/js/338.375bfed2.chunk.js",
+    "static/js/148.613c7d17.chunk.js": "/fiuber-documentacion/static/js/148.613c7d17.chunk.js",
+    "static/js/370.8f0777e4.chunk.js": "/fiuber-documentacion/static/js/370.8f0777e4.chunk.js",
+    "static/js/454.cb531768.chunk.js": "/fiuber-documentacion/static/js/454.cb531768.chunk.js",
     "static/js/787.2083ad79.chunk.js": "/fiuber-documentacion/static/js/787.2083ad79.chunk.js",
-    "static/media/logo.svg": "/fiuber-documentacion/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/fiuber-documentacion/index.html",
-    "main.073c9b0a.css.map": "/fiuber-documentacion/static/css/main.073c9b0a.css.map",
-    "main.73a31520.js.map": "/fiuber-documentacion/static/js/main.73a31520.js.map",
+    "main.1e8f5fdf.css.map": "/fiuber-documentacion/static/css/main.1e8f5fdf.css.map",
+    "main.ccaed489.js.map": "/fiuber-documentacion/static/js/main.ccaed489.js.map",
+    "466.fc2e86f2.chunk.js.map": "/fiuber-documentacion/static/js/466.fc2e86f2.chunk.js.map",
+    "338.375bfed2.chunk.js.map": "/fiuber-documentacion/static/js/338.375bfed2.chunk.js.map",
+    "148.613c7d17.chunk.js.map": "/fiuber-documentacion/static/js/148.613c7d17.chunk.js.map",
+    "370.8f0777e4.chunk.js.map": "/fiuber-documentacion/static/js/370.8f0777e4.chunk.js.map",
+    "454.cb531768.chunk.js.map": "/fiuber-documentacion/static/js/454.cb531768.chunk.js.map",
     "787.2083ad79.chunk.js.map": "/fiuber-documentacion/static/js/787.2083ad79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.73a31520.js"
+    "static/css/main.1e8f5fdf.css",
+    "static/js/main.ccaed489.js"
   ]
 }
