@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/370.8f0777e4.chunk.js","mappings":"2JAQA,UANoB,WAClB,OACE,wCAEJ,C","sources":["pages/guide-mobile/GuideMobile.jsx"],"sourcesContent":["import React from 'react'\r\n\r\nconst GuideMobile = () => {\r\n  return (\r\n    <div>GuideMobile</div>\r\n  )\r\n}\r\n\r\nexport default GuideMobile"],"names":[],"sourceRoot":""}

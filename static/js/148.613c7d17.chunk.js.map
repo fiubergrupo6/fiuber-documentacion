@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/148.613c7d17.chunk.js","mappings":"2JAQA,UANkB,WAChB,OACE,sCAEJ,C","sources":["pages/guide-rest/GuideRest.jsx"],"sourcesContent":["import React from 'react'\r\n\r\nconst GuideRest = () => {\r\n  return (\r\n    <div>GuideRest</div>\r\n  )\r\n}\r\n\r\nexport default GuideRest"],"names":[],"sourceRoot":""}

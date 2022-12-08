@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfiuber_documentacion=self.webpackChunkfiuber_documentacion||[]).push([[338],{338:function(e,u,c){c.r(u);c(791);var n=c(184);u.default=function(){return(0,n.jsx)("div",{children:"GuideArchitecture"})}}}]);
+//# sourceMappingURL=338.375bfed2.chunk.js.map
