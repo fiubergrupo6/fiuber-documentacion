@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkfiuber_documentacion=self.webpackChunkfiuber_documentacion||[]).push([[454],{454:function(e,u,c){c.r(u);c(791);var n=c(184);u.default=function(){return(0,n.jsx)("div",{children:"GuideBackoffice"})}}}]);
-//# sourceMappingURL=454.cb531768.chunk.js.map

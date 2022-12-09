@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/338.375bfed2.chunk.js","mappings":"2JAQA,UAN0B,WACxB,OACE,8CAEJ,C","sources":["pages/guide-architecture/GuideArchitecture.jsx"],"sourcesContent":["import React from 'react'\r\n\r\nconst GuideArchitecture = () => {\r\n  return (\r\n    <div>GuideArchitecture</div>\r\n  )\r\n}\r\n\r\nexport default GuideArchitecture"],"names":[],"sourceRoot":""}
