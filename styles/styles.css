@@ -61,12 +61,6 @@
 }
 
 .img-container {
-  width: 100%;
-  text-align: center;
-  margin: 30px 0;
-}
-
-.img-container-flex {
   display: flex;
   justify-content: space-around;
   margin: 30px 0;
