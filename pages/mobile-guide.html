@@ -1,28 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gu&iacute;a Mobile</title>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="navbar">
-        <a href="../index.html">Inicio</a>
-        <a href="installation-guide.html">Instalaci&oacute;n</a>
-        <a href="architecture-guide.html">Arquitectura</a>
-        <a href="rest-guide.html">API REST</a>
-        <a class="active" href="mobile-guide.html">Mobile</a>
-        <a href="backoffice-guide.html">Backoffice</a>
-    </div>
-    <div class="container-text">
-        <h1 class="title">Gu&iacute;a de Usuario</h1>
-        <h2 class="subtitle">Fiuber Mobile</h2>
-        <p class="text"></p>
-    </div>
-</body>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="../index.html">Inicio</a>
+      <a href="installation-guide.html">Instalaci&oacute;n</a>
+      <a href="architecture-guide.html">Arquitectura</a>
+      <a href="rest-guide.html">API REST</a>
+      <a class="active" href="mobile-guide.html">Mobile</a>
+      <a href="backoffice-guide.html">Backoffice</a>
+    </nav>
+    <main class="container-text">
+      <h1 class="title">Gu&iacute;a de Usuario</h1>
+      <h2 class="subtitle">Fiuber Mobile</h2>
+      <article>
+        <section>
+          <p class="section-title">Elecci&oacute;n de rol</p>
+          <p class="text">
+            El primer paso para empezar a utilizar la aplicaci&oacute;n es
+            elegir el rol que se desea utilizar. El mismo puede ser pasajero o
+            conductor.
+          </p>
+          <div class="img-container">
+            <img src="../img/choose-role.jpeg" alt="Elegir rol" />
+          </div>
+        </section>
+        <section>
+          <p class="section-title">Registro</p>
+          <p class="text">
+            El primer paso tanto para conductor como pasajero para poder
+            ingresar la aplicaci&oacute;n es registrarse. Para ello, se debe
+            ingresar un nombre, apellido, email, contrase&ntilde;a, DNI y
+            telef&oacute;no. En el caso del conductor tambi&eacute;n se deberá
+            ingresar un vehiculo y patente y podrá ingresar una billetera
+            extranjera que permita extraer los fondos. Si el email ya existe, no
+            se podrá crear la cuenta
+          </p>
+          <p class="text">
+            Otra opci&oacute;n es registrarse con una cuenta de Google, en cuyo
+            caso se necesitar&aacute; ingresar un dni y un tel&eacute;fono en
+            caso de ser pasajero; dni, tel&eacute;fono, patente y vehiculo en
+            caso de ser conductor.
+          </p>
+          <div class="img-container-flex">
+            <img src="../img/register-rider.jpeg" alt="Registro" />
+            <img src="../img/register-rider2.jpeg" alt="Registro" />
+          </div>
+        </section>
+        <section>
+          <p class="section-title">Login</p>
+          <p class="text">
+            Una vez cumplido el paso anterior se podrá ingresar a la aplicación,
+            en ambos casos, a trav&eacute;s de la p&acute;gina de login, para la
+            cual se deberá ingresar email y contrase&ntilde;a.
+          </p>
+          <div class="img-container">
+            <img src="../img/login.jpeg" alt="Login" />
+          </div>
+        </section>
+        <section>
+          <p class="section-title">Opciones</p>
+          <p class="text">
+            Una vez dentro de la aplicación, se podrá acceder a las opciones a
+            trav&eacute;s de la ruedita de configuraci&oacute;n en la parte
+            superior derecha.
+          </p>
+          <p class="text">
+            En ambos casos se podr&aacute; ver el perfil, cambiar los datos del
+            mismo, cambiar la contrase&ntilde;a, salir de la aplicaci&oacute;n y
+            eliminar la cuenta.
+          </p>
+          <div class="img-container">
+            <img src="../img/configuracion-rider.jpeg" alt="Opciones" />
+          </div>
+          <p class="text">
+            Adem&aacute;s en el caso del conductor, se podrá realizar el retiro
+            de fondos a una billetera externa.
+          </p>
+          <div class="img-container">
+            <img src="../img/configuracion-driver.jpeg" alt="Opciones" />
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
 </html>
