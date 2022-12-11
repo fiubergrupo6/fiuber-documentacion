@@ -22,7 +22,109 @@
     <div class="container-text">
         <h1 class="title">Gu&iacute;a de Usuario</h1>
         <h2 class="subtitle">Fiuber Backoffice</h2>
-        <p class="text"></p>
+        <h3  class="section">Log In</h3>
+        <p class="text">
+            Al entrar a la p&aacute;gina, lo primero que se ve es la pantalla de Log In. Los administradores entran al sistema ingresando
+            e-mail y contraseña. No se da la opci&oacute;n de registrarse, porque las cuentas de administradores solo pueden ser creadas
+            por otros administradores. Cuando se inicia sesi&oacute;n, se redirige a la pantalla de Rider Management, y se puede utilizar
+            la navbar en la aprte superior de la pantalla para acceder a las diferentes partes de la p&aacute;gina, las cuales se ir&aacute;n 
+            detallando a continuaci&oacute;n.
+        </p>
+        <h3 class="section">Rider Management</h3>
+        <p class="text">
+            La pantalla predeterminada de la p&aacute;gina es la de Rider Management (administraci&oacute;n de pasajeros). Ac&aacute; se 
+            listan todos los usuarios registrados en el sistema con el rol de pasajero, y para cada uno se permiten realizar las siguientes
+            acciones. 
+        </p>
+        <h4 class="subsection">Profile</h4>
+        <p class="text">
+            Permite visualizar el perfil de un usuario, mostrando su informaci&oacute;n personal, y su promedio de calificaciones por parte 
+            de otros usuarios.
+        </p>
+        <p class="text">
+            Tambi&eacute;n se permite acceder al listado de todas las opiniones que recibi&oacute; el usuario, junto con la calificaci&oacute;n 
+            asociada, el autor y la fecha.
+        </p>
+        <h4 class="subsection">Metrics</h4>
+        <p class="text">
+            
+        </p>
+        <h4 class="subsection">Transactions</h4>
+        <h5 class="text">Transaction History</h5>
+        <p class="text">
+            El Transaction History lista todas las transacciones vinculadas a la wallet del usuario, tanto aquellas en las que recibe dinero 
+            como en las que recibe. Adem&aacute;s se cuentan con una serie de filtros que pueden utilizarse para elegir qu&eacute; transacciones 
+            mostrar.
+        </p>
+        <h5 class="text">Deposit Funds</h5>
+        <p class="text">
+            Desde esta opci&oacute;n se permite depositarle ETH a la wallet del usuario, utilizando los fondos disponibles en la wallet de
+            administradores. El gas price lo pagan los administradores, por lo que hay que tenerlo en cuenta para ver si se cuentan con los 
+            fondos suficientes como para realizar la transacci&oacute;n.
+        </p>
+        <h4 class="subsection">Block / Unblock</h4>
+        <p class="text">
+            Con el bot&oacute;n de block / unblock, se puede bloquear el acceso a la aplicaci&oacute;n por parte del usuario. Cuando este intente 
+            iniciar sesi&oacute;n, se le dir&aacute; que su usuario o contraseña son incorrectos, y tambi&eacute;n se le impedir&aacute; crear otra
+            cuenta con ese e-mail. 
+        </p>
+        <h3 class="section">Driver Management</h3>
+        <p class="text">
+            Driver Management (administraci&oacute;n de choferes) es equivalente a la pantalla anterior, pero lista todos los choferes 
+            de la aplicaci&oacute;n. Se muestran tambi&eacute;n algunos datos que no est&aacute;n presentes en los pasajeros: veh&iacute;culo 
+            y patente.
+        </p>
+        <h3 class="section">Service Management > Pricing Rules</h3>
+        <p class="text">
+            La pantalla de pricing rules (reglas de cotizaci&oacute;n) se utiliza para administrar el m&eacute;todo de c&aacute;lculo de precios 
+            de los viajes que se realizan en la aplicaci&oacute;n. Cuenta con tres pestañas: Las opciones, la calculadora de precios, y el historial 
+            de cambios.
+        </p>
+        <h4 class="subsection">Settings</h4>
+        <p class="text">
+            En la pestaña de settings, se pueden ajustar los par&aacute;metros que se usan en la f&oacute;rmula de c&aacute;lculo de precios de 
+            lso viajes, que consiste en un precio base a fijar por el administrador, y diferentes recargos por distancia del recorrido y duraci&oacute;n 
+            estimada del mismo. A esto se le suma otro recargo que depende de la demanda actual de la aplicaci&oacute;n, considerando la diferencia entre 
+            entre pasajeros buscando un viaje y choferes disponibles.
+        </p>
+        <h4 class="subsection">Price Calculator</h4>
+        <p class="text">
+            En la pestaña de price calculator, se puede probar los ajustes realizados a las reglas de cotizaci&oacute;n antes de hacerlos vigentes. 
+            Se deben ingresar las car&aacute;cteristicas de un viaje y una cantidad de pasajeros y choferes disponibles. Luego se muestra por 
+            pantalla el precio calculado.
+        </p>
+        <h4 class="subsection">Changelog</h4>
+        <p class="text">
+            En el changelog, se guarda registro de todas las configuraciones utilizadas a lo largo del tiempo para el c&aacute;lculo de precios. 
+            Tambi&eacute;n se da la opci&oacute;n de copiar una configuraci&oacute;n anterior para poder usarla r&aacute;pidamente. (Luego de presionar 
+            copy, tambi&eacute;n se debe presionar el bot&oacute;n de save changes para guardar).
+        </p>
+        <h3 class="section">Reported Users</h3>
+        <p class="text">
+            En Reported Riders / Drivers, se listan todas las denuncias realizadas por los usuarios, esto incluye el autor de la denuncia, el 
+            usuario denunciado, la fecha y el mensaje descriptivo de la denuncia. El administrador eval&uacute;a las denuncias y decide que acci&oacute;n 
+            tomar al respecto. Tambi&eacute;n se permite eliminar denuncias con el boton X.
+        </p>
+        <h3 class="section">Metrics</h3>
+        <h4 class="subsection">User Metrics</h4>
+        <p class="text">
+            
+        </p>
+        <h4 class="subsection">Ride Metrics</h4>
+        <p class="text">
+            
+        </p>
+        <h4 class="subsection">Transaction Metrics</h4>
+        <p class="text">
+            
+        </p>
+        <h3 class="section">Admin Register</h3>
+        <p class="text">
+            Esta opci&oacute;n solo se encuentra disponible para los administradores con permisos para registrar nuevas cuentas. Permite la 
+            creaci&oacute;n de un nuevo administrador, ingresando un e-mail y una contraseña. Adem&aacute;s permite determinar el nivel de 
+            permisos de la cuenta. La diferencia entre el nivel 1 y el 2 es que el primero no es capaz de registrar nuevos administradores, 
+            y el 2 s&iacute; lo permite. 
+        </p>
     </div>
 </body>
 </html>
