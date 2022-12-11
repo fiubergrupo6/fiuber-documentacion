@@ -22,7 +22,296 @@
     <div class="container-text">
         <h1 class="title">Gu&iacute;a de Usuario</h1>
         <h2 class="subtitle">Fiuber Backoffice</h2>
-        <p class="text"></p>
+        <h3  class="section-title">Log In</h3>
+        <p class="text">
+            Al entrar a la p&aacute;gina, lo primero que se ve es la pantalla de Log In. Los administradores entran al sistema ingresando
+            e-mail y contraseña. No se da la opci&oacute;n de registrarse, porque las cuentas de administradores <a href="#admin_register">solo pueden ser creadas
+            por otros administradores</a>. Cuando se inicia sesi&oacute;n, se redirige a la pantalla de Rider Management, y se puede utilizar
+            la navbar en la parte superior de la pantalla para acceder a las diferentes partes de la p&aacute;gina, las cuales se ir&aacute;n 
+            detallando a continuaci&oacute;n.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/backoffice-login.png" alt="backoffice login">
+        </div>
+        <h3 class="section-title">Rider Management</h3>
+        <p class="text">
+            La pantalla predeterminada de la p&aacute;gina es la de Rider Management (administraci&oacute;n de pasajeros). Ac&aacute; se 
+            listan todos los usuarios registrados en el sistema con el rol de pasajero, y para cada uno se permiten realizar las siguientes
+            acciones. 
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/rider-management.png" alt="rider management">
+        </div>
+        <h4 class="subsection-title">Profile</h4>
+        <p class="text">
+            Permite visualizar el perfil de un usuario, mostrando su informaci&oacute;n personal, y su promedio de calificaciones por parte 
+            de otros usuarios.
+        </p>
+        <div class="img-container">
+            <img class="img-web-modal" src="../img/backoffice/user-profile.png" alt="user profile">
+        </div>
+        <p class="text">
+            Tambi&eacute;n se permite acceder al listado de todas las opiniones que recibi&oacute; el usuario, junto con la calificaci&oacute;n 
+            asociada, el autor y la fecha.
+        </p>
+        <div class="img-container">
+            <img class="img-web-modal" src="../img/backoffice/user-reviews.png" alt="user reviews">
+        </div>
+        <h4 class="subsection-title">Metrics</h4>
+        <p class="text">
+            Esta opci&oacute;n permite ver diferentes estad&iacute;sticas relacionadas con las acciones que realiza el usuario dentro de la 
+            aplicaci&oacute;n, representadas con diferentes gr&aacute;ficos. Las diferentes m&eacute;tricas se detallan a continuaci&oacute;n.
+        </p>
+        <br>
+        <h5 class="text">Logins</h5>
+        <br>
+        <p class="text">
+            Muestra un gr&aacute;fico con la cantidad de veces que el usuario inici&oacute; sesi&oacute;n en la aplicaci&oacute;n a lo largo 
+            del tiempo.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/user-metrics-1.png" alt="login metrics">
+        </div>
+        <h5 class="text">Rides</h5>
+        <br>
+        <p class="text">
+            Muestra la cantidad de viajes completados del usuario a lo largo del tiempo.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/user-metrics-2.png" alt="ride metrics">
+        </div>
+        <h5 class="text">Canceled Rides (Unicamente disponible para pasajeros)</h5>
+        <br>
+        <p class="text">
+            Muestra la cantidad de viajes cancelados (se empieza a buscar un viaje, pero se cancela la b&uacute;squeda) del usuario a 
+            lo largo del tiempo.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/user-metrics-3.png" alt="canceled rides metrics">
+        </div>
+        <h5 class="text">Ratings</h5>
+        <br>
+        <p class="text">
+            Muestra las calificaciones realizadas y recibidas del usuario a lo largo del tiempo, las cuales var&iacute;an entre 1 y 5 estrellas.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/user-metrics-4.png" alt="ratings made metrics">
+            <img class="img-web" src="../img/backoffice/user-metrics-5.png" alt="ratings received metrics">
+        </div>
+        <h4 class="subsection-title">Transactions</h4>
+        <h5 class="text">Transaction History</h5>
+        <br>
+        <p class="text">
+            El Transaction History lista todas las transacciones vinculadas a la wallet del usuario, tanto aquellas en las que recibe dinero 
+            como en las que lo env&iacute;a. Adem&aacute;s se cuenta con una serie de filtros que pueden utilizarse para elegir qu&eacute; transacciones 
+            mostrar.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/transaction-history.png" alt="transaction history">
+            <img class="img-web" src="../img/backoffice/transaction-history-filters.png" alt="transaction history filters">
+        </div>
+        <h5 class="text">Deposit Funds</h5>
+        <br>
+        <p class="text">
+            Desde esta opci&oacute;n se permite depositarle ETH a la wallet del usuario, utilizando los fondos disponibles en la wallet de
+            administradores. El gas price lo pagan los administradores, por lo que hay que tenerlo en cuenta para ver si se tiene fondos 
+            suficientes como para realizar la transacci&oacute;n.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/deposit-funds.png" alt="deposit funds">
+        </div>
+        <h4 class="subsection-title">Block / Unblock</h4>
+        <p class="text">
+            Con el bot&oacute;n de block / unblock, se puede bloquear el acceso a la aplicaci&oacute;n por parte del usuario. Cuando este intente 
+            iniciar sesi&oacute;n, se le dir&aacute; que su e-mail o contraseña son incorrectos, y tambi&eacute;n se le impedir&aacute; crear otra
+            cuenta con ese e-mail. 
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/unblock.png" alt="unblock user">
+        </div>
+        <h3 class="section-title">Driver Management</h3>
+        <p class="text">
+            Driver Management (administraci&oacute;n de choferes) es equivalente a la pantalla anterior, pero lista todos los choferes 
+            de la aplicaci&oacute;n. Se muestran tambi&eacute;n algunos datos que no est&aacute;n presentes en los pasajeros: veh&iacute;culo 
+            y patente.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/driver-management.png" alt="driver management">
+        </div>
+        <h3 class="section-title">Service Management > Pricing Rules</h3>
+        <p class="text">
+            La pantalla de pricing rules (reglas de cotizaci&oacute;n) se utiliza para administrar el m&eacute;todo de c&aacute;lculo de precios 
+            de los viajes que se realizan en la aplicaci&oacute;n. Cuenta con tres pestañas: Las opciones, la calculadora de precios, y el historial 
+            de cambios.
+        </p>
+        <h4 class="subsection-title">Settings</h4>
+        <p class="text">
+            En la pestaña de settings, se pueden ajustar los par&aacute;metros que se usan en la f&oacute;rmula de c&aacute;lculo de precios de 
+            los viajes, que consiste en un precio base a fijar por el administrador, y diferentes recargos por distancia del recorrido y duraci&oacute;n 
+            estimada del mismo. A esto se le suma otro recargo que depende de la demanda actual de la aplicaci&oacute;n, considerando la diferencia entre 
+            entre pasajeros buscando un viaje y choferes disponibles.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/pricing-rules-1.png" alt="settings">
+        </div>
+        <h4 class="subsection-title">Price Calculator</h4>
+        <p class="text">
+            En la pestaña de price calculator, se puede probar los ajustes realizados a las reglas de cotizaci&oacute;n antes de hacerlos vigentes. 
+            Se deben ingresar las car&aacute;cteristicas de un viaje y una cantidad de pasajeros y choferes disponibles. Luego se muestra por 
+            pantalla el precio calculado.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/pricing-rules-2.png" alt="price calculator">
+        </div>
+        <h4 class="subsection-title">Changelog</h4>
+        <p class="text">
+            En el changelog, se guarda registro de todas las configuraciones utilizadas a lo largo del tiempo para el c&aacute;lculo de precios. 
+            Tambi&eacute;n se da la opci&oacute;n de copiar una configuraci&oacute;n anterior para poder usarla r&aacute;pidamente. (Luego de presionar 
+            copy, tambi&eacute;n se debe presionar el bot&oacute;n de save changes para guardar).
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/pricing-rules-3.png" alt="changelog">
+        </div>
+        <h3 class="section-title">Reported Users</h3>
+        <p class="text">
+            En Reported Riders / Drivers, se listan todas las denuncias realizadas por los usuarios, esto incluye el autor de la denuncia, el 
+            usuario denunciado, la fecha y el mensaje descriptivo de la denuncia. El administrador eval&uacute;a las denuncias y decide que acci&oacute;n 
+            tomar al respecto. Tambi&eacute;n se permite eliminar denuncias con el boton X.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/reported-riders.png" alt="reported riders">
+            <img class="img-web" src="../img/backoffice/reported-drivers.png" alt="reported drivers">
+        </div>
+        <h3 class="section-title">Metrics</h3>
+        <h4 class="subsection-title">User Metrics</h4>
+        <p class="text">
+            En esta pantalla se muestran estad&iacute;sticas del uso de la aplicaci&oacute;n entre todos los usuarios, representadas con 
+            diferentes gr&aacute;ficos. Las diferentes m&eacute;tricas se detallan a continuaci&oacute;n.
+        </p>
+        <br>
+        <h5 class="text">Default Registers</h5>
+        <br>
+        <p class="text">
+            Muestra el total de usuarios registrados en la aplicaci&oacute;n a lo largo del tiempo mediante el me&eacute;todo de registro 
+            tradicional.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/user-metrics-6.png" alt="default registers">
+        </div>
+        <h5 class="text">Federated Identity Registers</h5>
+        <br>
+        <p class="text">
+            Muestra el total de usuarios registrados en la aplicaci&oacute;n a lo largo del tiempo mediante el me&eacute;todo de registro 
+            a trav&eacute;s de identidad federada (Cuenta de Google).
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/user-metrics-7.png" alt="federated identity registers">
+        </div>
+        <h5 class="text">Default Login</h5>
+        <br>
+        <p class="text">
+            Muestra el total de sesiones iniciadas en la aplicaci&oacute;n a lo largo del tiempo por parte de cuentas registradas 
+            mediante el m&eacute;todo tradicional.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/user-metrics-8.png" alt="default login">
+        </div>
+        <h5 class="text">Federated Identity Login</h5>
+        <br>
+        <p class="text">
+            Muestra el total de sesiones iniciadas en la aplicaci&oacute;n a lo largo del tiempo por parte de cuentas registradas 
+            mediante el m&eacute;todo de registro a trav&eacute;s de identidad federada (Cuenta de Google).
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/user-metrics-9.png" alt="federated identity login">
+        </div>
+        <h5 class="text">Blocked Users</h5>
+        <br>
+        <p class="text">
+            Muestra la cantidad de usuarios bloqueados a lo largo del tiempo, cuyas cuentas siguen bloqueadas actualmente (si una 
+            cuenta se bloquea pero luego se desbloquea, no aparecer&aacute; en el gr&aacute;fico).
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/user-metrics-10.png" alt="blocked users">
+        </div>
+        <h4 class="subsection-title">Ride Metrics</h4>
+        <p class="text">
+            En esta pantalla se muestran estad&iacute;sticas de los viajes realizados en la aplicaci&oacute;n, representadas con 
+            gr&aacute;ficos en funci&oacute;n del tiempo e histogramas. Las diferentes m&eacute;tricas se detallan a continuaci&oacute;n.
+        </p>
+        <br>
+        <h5 class="text">Latest Rides</h5>
+        <br>
+        <p class="text">
+            Muestra el total de viajes realizados en la aplicaci&oacute;n a lo largo del tiempo.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/ride-metrics-1.png" alt="latest rides grafico">
+        </div>
+        <p class="text">
+            Tambi&eacute;n hay un histograma con la distribuci&oacute;n de precios de los viajes realizados.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/ride-metrics-2.png" alt="latest rides histograma">
+        </div>
+        <h5 class="text">Rides Duration</h5>
+        <br>
+        <p class="text">
+            Muestra la duraci&oacute;n de los viajes realizados en la aplicaci&oacute;n a lo largo del tiempo.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/ride-metrics-3.png" alt="rides duration grafico">
+        </div>
+        <p class="text">
+            Tambi&eacute;n hay un histograma con la distribuci&oacute;n de las duraciones de los viajes realizados.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/ride-metrics-4.png" alt="rides duration histograma">
+        </div>
+        <h4 class="subsection-title">Transaction Metrics</h4>
+        <p class="text">
+            En esta pantalla se muestran estad&iacute;sticas de las transacciones realizadas en la aplicaci&oacute;n, representadas con 
+            gr&aacute;ficos en funci&oacute;n del tiempo e histogramas. Las diferentes m&eacute;tricas se detallan a continuaci&oacute;n.
+        </p>
+        <br>
+        <h5 class="text">Payments</h5>
+        <br>
+        <p class="text">
+            Muestra la cantidad de pagos realizados en la aplicaci&oacute;n a lo largo del tiempo.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/transaction-metrics-1.png" alt="payments grafico">
+        </div>
+        <p class="text">
+            Tambi&eacute;n hay un histograma con la distribuci&oacute;n del valor de los pagos realizados.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/transaction-metrics-2.png" alt="payments histograma">
+        </div>
+        <h5 class="text">Withdraws</h5>
+        <br>
+        <p class="text">
+            Muestra la cantidad de retiros de fondos realizados en la aplicaci&oacute;n a lo largo del tiempo.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/transaction-metrics-3.png" alt="withdraws grafico">
+        </div>
+        <p class="text">
+            Tambi&eacute;n hay un histograma con la distribuci&oacute;n del valor de los retiros realizados.
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/transaction-metrics-4.png" alt="withdraws histograma">
+        </div>
+        <h3 id="admin_register" class="section-title">Admin Register</h3>
+        <p class="text">
+            Esta opci&oacute;n solo se encuentra disponible para los administradores con permisos para registrar nuevas cuentas. Permite la 
+            creaci&oacute;n de un nuevo administrador, ingresando un e-mail y una contraseña. Adem&aacute;s se puede determinar el nivel de 
+            permisos de la cuenta. La diferencia entre el nivel 1 y el 2 es que el primero no es capaz de registrar nuevos administradores, 
+            y el 2 s&iacute; lo permite. 
+        </p>
+        <div class="img-container">
+            <img class="img-web" src="../img/backoffice/register-admin.png" alt="register admin">
+        </div>
     </div>
 </body>
 </html>
