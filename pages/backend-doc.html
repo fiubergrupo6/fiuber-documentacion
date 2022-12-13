@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="../index.html">Inicio</a>
+        <a class="active" href="backend-doc.html">Backend</a>
+        <a href="mobile-guide.html">Mobile</a>
+        <a href="backoffice-guide.html">Backoffice</a>
+    </div>
+    <div class="container-text">
+        <h1 class="title">Backend</h1>
+        <h2 class="subtitle">Arquitectura</h2>
+        <div class="img-container">
+            <img class="img-web" src="../img/backend/arquitectura.png" alt="backoffice login">
+        </div>
+        <h3 class="section-title">Descripción</h3>
+        <p class="text">
+            Consiste de cuatro microservicios (Cuentas, Viajes, Pagos y Métricas), donde cada uno de estos brinda una
+            determinada API y posee su propia base de datos (el tipo de base de datos está especificado en el diagrama
+            anterior).
+            <br>Por otro lado, se encuentra un gateway que hace de intermediario entre el frontend y los microservicios
+            evitando una comunicación directa con los mismos y encargándose de la creación o validación del token cuando
+            corresponda.
+            <br>A su vez, también se puede observar cierta interacción entre los microservicios en cuestión, la cual
+            sucede de forma interna y directa sin pasar por el gateway.
+        </p>
+        <br>
+        <br>
+        <h2 class="subtitle">Microservicios</h2>
+        <h3 class="section-title">Cuentas</h3>
+        <p class="text">
+            Se encarga de todas las funciones relacionadas a la creación, modificación, eliminación y obtención de
+            cuentas, ya sean usuarios (choferes y pasajeros) como administradores del backoffice.
+        </p>
+        <br>
+        <h4 class="subsection-title">Endpoints</h4>
+        <ul>
+            <li>
+                <p class="endpoint-post">[POST] /auth/register</p>
+                <p class="text">
+                    Realiza el registro de una nueva cuenta: chofer, pasajero o administrador.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /auth/login</p>
+                <p class="text">
+                    Realiza el login de cuenta: chofer, pasajero o administrador.
+                    <br>Este endpoint se utiliza tanto para login por defecto (email y contraseña) como para el login
+                    con identidad federada.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /auth/compare-paswords</p>
+                <p class="text">
+                    Recibe un usuario (email) y una contraseña, y se encarga de chequear si la contraseña recibida
+                    coincide con la del usuario.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /profile</p>
+                <p class="text">
+                    Obtiene la información del perfil de un usuario dado.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-patch">[PATCH] /profile</p>
+                <p class="text">
+                    Realiza una modificación en la información de un usuario dado.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-delete">[DELETE] /profile</p>
+                <p class="text">
+                    Elimina un usuario dado.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /profile/locations</p>
+                <p class="text">
+                    Guarda una ubicación predefinida asociada a un usuario.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /profile/locations</p>
+                <p class="text">
+                    Obtiene todas las ubicaciones predefinidas asociadas a un usuario.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-delete">[DELETE] /profile/locations</p>
+                <p class="text">
+                    Elimina una ubicación predefinida asociada a un usuario.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /admin/users</p>
+                <p class="text">
+                    Obtiene la información de usuarios registrados. También puede recibir un limite y un offset para
+                    devolver una cantidad limite de usuarios habiéndose desplazado una cantidad de usuarios determinada
+                    por el offset.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /admin/size</p>
+                <p class="text">
+                    Obtiene la cantidad total de usuarios registrados según el tipo: pasajero o chofer.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-patch">[PATCH] /admin/block</p>
+                <p class="text">
+                    Bloquea/Desbloquea a un usuario.
+                </p>
+                <br>
+            </li>
+        </ul>
+
+
+
+        <h3 class="section-title">Métricas</h3>
+        <p class="text">
+            Se encarga de todas las funciones relacionadas a la creación, modificación y obtención de métricas
+            relacionadas a los viajes, usuarios y transacciones.
+        </p>
+        <br>
+        <h4 class="subsection-title">Endpoints</h4>
+        <ul>
+            <li>
+                <p class="endpoint-post">[POST] /rides</p>
+                <p class="text">
+                    Guarda información útil para métricas acerca de un nuevo viaje: chofer, pasajero, precio, duración y
+                    fecha.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /rides</p>
+                <p class="text">
+                    Obtiene información de los últimos viajes (fecha, precio y duración).
+                    <br> Recibe un filtro de tiempo, permitiendo obtener los viajes de las últimas 24hs, última semana y
+                    último mes.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /transactions/payments</p>
+                <p class="text">
+                    Registra información útil para métricas acerca de un nuevo pago realizado (monto y fecha).
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /transactions/payments</p>
+                <p class="text">
+                    Obtiene información de los últimos pagos.
+                    <br> Recibe un filtro de tiempo, permitiendo obtener los pagos de las últimas 24hs, última semana y
+                    último mes.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /transactions/withdraws</p>
+                <p class="text">
+                    Registra información útil para métricas acerca de un nuevo retiro realizado (monto y fecha).
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /transactions/withdraws</p>
+                <p class="text">
+                    Obtiene información de los últimos retiros.
+                    <br> Recibe un filtro de tiempo, permitiendo obtener los retiros de las últimas 24hs, última semana
+                    y último mes.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /users/register</p>
+                <p class="text">
+                    Registra información útil para métricas acerca de un nuevo usuario creado.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /users/login</p>
+                <p class="text">
+                    Registra un nuevo inicio de sesión asociado a un usuario.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-patch">[PATCH] /users/block</p>
+                <p class="text">
+                    Añade/Elimina fecha de bloqueo dependiendo si el usuario fue bloqueado/desbloqueado.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-patch">[PATCH] /users/cancel-ride</p>
+                <p class="text">
+                    Añade la fecha del viaje cancelado a la lista de viajes cancelados asociados a dicho usuario.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-patch">[PATCH] /users/ratings</p>
+                <p class="text">
+                    Añade la calificación recibida a los datos de un usuario.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /users/default-register</p>
+                <p class="text">
+                    Obtiene información de los últimos registros de usuarios que utilizaron email y contraseña.
+                    <br> Recibe un filtro de tiempo, permitiendo obtener los registros de las últimas 24hs, última
+                    semana y último mes.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /users/fi-register</p>
+                <p class="text">
+                    Obtiene información de los últimos registros de usuarios que utilizaron identidad federada (Google).
+                    <br> Recibe un filtro de tiempo, permitiendo obtener los registros de las últimas 24hs, última
+                    semana y último mes.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /users/default-login</p>
+                <p class="text">
+                    Obtiene los últimos inicios de sesión a través de email y contraseña.
+                    <br> Recibe un filtro de tiempo, permitiendo obtener los logins de las últimas 24hs, última semana y
+                    último mes.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /users/fi-login</p>
+                <p class="text">
+                    Obtiene los últimos inicios de sesión a través de identidad federada (Google).
+                    <br> Recibe un filtro de tiempo, permitiendo obtener los logins de las últimas 24hs, última semana y
+                    último mes.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /users/blocked</p>
+                <p class="text">
+                    Obtiene información de los últimos bloqueos de usuarios.
+                    <br> Recibe un filtro de tiempo, permitiendo obtener los bloqueos de las últimas 24hs, última semana
+                    y último mes.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /users/single-user/logins</p>
+                <p class="text">
+                    Obtiene los inicios de sesión asociados a un usuario específico.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /users/single-user/rides</p>
+                <p class="text">
+                    Obtiene métricas de los viajes asociados a un usuario específico.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /users/single-user/canceled-rides</p>
+                <p class="text">
+                    Obtiene métricas de los viajes cancelados por un usuario específico.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /users/single-user/ratings</p>
+                <p class="text">
+                    Obtiene las calificaciones hechas y recibidas de un usuario específico.
+                </p>
+                <br>
+            </li>
+        </ul>
+
+
+
+        <h3 class="section-title">Viajes</h3>
+        <p class="text">
+            Se encarga de todas las funciones relacionadas a la realización de un viaje incluyendo el inicio de un viaje, la búsqueda de pasajero por parte del chofer, confirmación de viaje y la finalización del mismo.
+        </p>
+        <br>
+        <h4 class="subsection-title">Endpoints</h4>
+        <ul>
+            <li>
+                <p class="endpoint-post">[POST] /rides/new-confirmed</p>
+                <p class="text">
+                    Registra un nuevo viaje confirmado (iniciado)
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /rides/unconfirmed</p>
+                <p class="text">
+                    Registra un viaje pendiente (viaje sin confirmar), es decir, no tiene chofer asignado.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-delete">[DELETE] /rides/cancel-unconfirmed</p>
+                <p class="text">
+                    Elimina un viaje pendiente (viaje sin confirmar).
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /rides/available-driver</p>
+                <p class="text">
+                    Registra al chofer en cuestión en la tabla de choferes que se encuentran en busca de un viaje.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-delete">[DELETE] /rides/delete-available-driver</p>
+                <p class="text">
+                    Elimina al chofer en cuestión en la tabla de choferes que se encuentran en busca de un viaje.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /rides/report</p>
+                <p class="text">
+                    Registra un reporte realizado durante el viaje del pasajero al chofer o viceversa.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /rides/reports</p>
+                <p class="text">
+                    Obtiene los reportes realizados. Recibe un limite y un offset para devolver una cantidad limite de
+                    reportes habiéndose desplazado una cantidad de reportes determinada por el offset.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /rides/reports-size</p>
+                <p class="text">
+                    Obtiene cantidad total de reportes realizados a pasajeros o a choferes.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-delete">[DELETE] /rides/delete-report</p>
+                <p class="text">
+                    Elimina un reporte.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /rides/last-unconfirmed</p>
+                <p class="text">
+                    Obtiene el último viaje pendiente sin chofer asignado.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /rides/confirmedRide</p>
+                <p class="text">
+                    Obtiene un viaje confirmado y finalizado asociado a un pasajero determinado y envía la notificación
+                    de fin de viaje.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /rides/getRide</p>
+                <p class="text">
+                    Obtiene un viaje confirmado y finalizado buscando por su id.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /rides/arrivalDate</p>
+                <p class="text">
+                    Añade fecha de finalización a un viaje.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /rides/ride-price</p>
+                <p class="text">
+                    Obtiene el costo del viaje en función de la reglas de cotización actuales.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /rides/check-unconfirmed</p>
+                <p class="text">
+                    Obtiene (si existe) el viaje pendiente asociado a un pasajero
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /users/stars</p>
+                <p class="text">
+                    Obtiene la cantidad de estrellas que posee un usuario según las calificaciones recibidas.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /users/reviews</p>
+                <p class="text">
+                    Obtiene las calificaciones cualitativas asociadas a un usuario específico.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-patch">[PATCH] /users/submit-reviews</p>
+                <p class="text">
+                    Añade una calificación cualitativa a la información de un viaje determinado.
+                    <br> Dicha calificaciones/comentario puede ser tanto del pasajero hacia el chofer o viceversa.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /pricing/save-price-rules</p>
+                <p class="text">
+                    Crea una nueva regla de cotización
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /pricing/price-rules</p>
+                <p class="text">
+                    Obtiene las reglas de cotización existentes. Recibe un limite y un offset para devolver una cantidad limite de reglas habiéndose desplazado una cantidad de reglas determinada por el offset.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /pricing/price-rules-size</p>
+                <p class="text">
+                    Obtiene cantidad total de reglas de cotización creadas.
+                </p>
+                <br>
+            </li>
+        </ul>
+
+
+
+        <h3 class="section-title">Pagos</h3>
+        <p class="text">
+            Se encarga de todas las funciones relacionadas a la creación y obtención de wallets, realización de depósitos y retiros, y obtención de información de transacciones realizadas.
+        </p>
+        <br>
+        <h4 class="subsection-title">Endpoints</h4>
+        <ul>
+            <li>
+                <p class="endpoint-get">[GET] /wallet</p>
+                <p class="text">
+                    Obtiene la wallet asociada a una cuenta a partir de una id.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /wallet</p>
+                <p class="text">
+                    Crea una nueva wallet
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /deposit</p>
+                <p class="text">
+                    Crea un nuevo deposito
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /transaction-completed</p>
+                <p class="text">
+                    Obtiene la información de un deposito completado.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /balance</p>
+                <p class="text">
+                    Obtiene el saldo total de una wallet.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /transactions/transactions-list</p>
+                <p class="text">
+                    Obtiene lista de transacciones asociadas a una wallet determinada.Recibe un limite y un offset para
+                    devolver una cantidad limite de transacciones habiéndose desplazado una cantidad de transacciones determinada por el offset.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /transactions/transactions-size</p>
+                <p class="text">
+                    Obtiene cantidad total de transacciones asociadas a una wallet determinada.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-get">[GET] /pricing/ammount-range</p>
+                <p class="text">
+                    Obtiene el rango entre el que se encuentra el monto de las transacciones asociadas a una determinada wallet, es decir, el monto mas bajo y el más alto.
+                </p>
+                <br>
+            </li>
+            <li>
+                <p class="endpoint-post">[POST] /withdraw</p>
+                <p class="text">
+                    Realiza el retiro de un determinado monto de una wallet.
+                </p>
+                <br>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>

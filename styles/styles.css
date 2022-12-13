@@ -58,6 +58,12 @@
 }
 
 .subsection-title {
+	font-size: 25px;
+	font-family: "Roboto", sans-serif;
+	margin: 50px 0 20px 0;
+}
+
+.subsection-title {
     font-size: 22.5px;
     font-family: 'Roboto', sans-serif;
 	margin: 15px 0 15px 0;
@@ -86,4 +92,32 @@
 
 .img-web-modal {
 	width: 60%;
+}
+
+.endpoint-post{
+  font-size: 17.5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #218829;
+}
+
+.endpoint-get{
+  font-size: 17.5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #1377aa;
+}
+
+.endpoint-patch{
+  font-size: 17.5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #0e9d6b;
+}
+
+.endpoint-delete{
+  font-size: 17.5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #e92323;
 }
