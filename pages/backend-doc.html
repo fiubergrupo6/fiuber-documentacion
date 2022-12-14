@@ -38,6 +38,47 @@
         </p>
         <br>
         <br>
+        <br>
+        <br>
+        <h2 class="subtitle">Instalación y ejecución</h2>
+        <h3 class="section-title">Instalación</h3>
+        <p class="text" markdown="1">
+            Para los cuatro microservicios ejecutar el comando `npm i` para instalar las dependencias utilizadas en cada
+            microservicio.
+            <br>
+            Para el gateway, ejecutar el comando `pip install -r requirements.txt` para instalar las dependencias
+            utilizadas en el mismo.
+        </p>
+        <h3 class="section-title">Ejecución</h3>
+        <p class="text" markdown="1">Para correr de forma local el gateway y cada uno de los microservicios, se debe ejecutar los siguientes comandos: </p>
+        <br>
+
+        <ul>
+            <li>
+                <p class="text" markdown="1">Gateway: `python app.py`</p>
+                <br>
+            </li>
+            <li>
+                <p class="text" markdown="1">Cuentas: `npm run dev`</p>
+                <br>
+            </li>
+            <li>
+                <p class="text" markdown="1">Métricas: `npm run metricas`</p>
+                <br>
+            </li>
+            <li>
+                <p class="text" markdown="1">Viajes: `npm run viajes`</p>
+                <br>
+            </li>
+            <li>
+                <p class="text" markdown="1">Pagos: `nodemon src/server`</p>
+                <br>
+            </li>
+        </ul>
+        <br>
+        <br>
+        <br>
+        <br>
         <h2 class="subtitle">Microservicios</h2>
         <h3 class="section-title">Cuentas</h3>
         <p class="text">
@@ -311,7 +352,8 @@
 
         <h3 class="section-title">Viajes</h3>
         <p class="text">
-            Se encarga de todas las funciones relacionadas a la realización de un viaje incluyendo el inicio de un viaje, la búsqueda de pasajero por parte del chofer, confirmación de viaje y la finalización del mismo.
+            Se encarga de todas las funciones relacionadas a la realización de un viaje incluyendo el inicio de un
+            viaje, la búsqueda de pasajero por parte del chofer, confirmación de viaje y la finalización del mismo.
         </p>
         <br>
         <h4 class="subsection-title">Endpoints</h4>
@@ -455,7 +497,8 @@
             <li>
                 <p class="endpoint-get">[GET] /pricing/price-rules</p>
                 <p class="text">
-                    Obtiene las reglas de cotización existentes. Recibe un limite y un offset para devolver una cantidad limite de reglas habiéndose desplazado una cantidad de reglas determinada por el offset.
+                    Obtiene las reglas de cotización existentes. Recibe un limite y un offset para devolver una cantidad
+                    limite de reglas habiéndose desplazado una cantidad de reglas determinada por el offset.
                 </p>
                 <br>
             </li>
@@ -472,7 +515,8 @@
 
         <h3 class="section-title">Pagos</h3>
         <p class="text">
-            Se encarga de todas las funciones relacionadas a la creación y obtención de wallets, realización de depósitos y retiros, y obtención de información de transacciones realizadas.
+            Se encarga de todas las funciones relacionadas a la creación y obtención de wallets, realización de
+            depósitos y retiros, y obtención de información de transacciones realizadas.
         </p>
         <br>
         <h4 class="subsection-title">Endpoints</h4>
@@ -516,7 +560,8 @@
                 <p class="endpoint-get">[GET] /transactions/transactions-list</p>
                 <p class="text">
                     Obtiene lista de transacciones asociadas a una wallet determinada.Recibe un limite y un offset para
-                    devolver una cantidad limite de transacciones habiéndose desplazado una cantidad de transacciones determinada por el offset.
+                    devolver una cantidad limite de transacciones habiéndose desplazado una cantidad de transacciones
+                    determinada por el offset.
                 </p>
                 <br>
             </li>
@@ -530,7 +575,8 @@
             <li>
                 <p class="endpoint-get">[GET] /pricing/ammount-range</p>
                 <p class="text">
-                    Obtiene el rango entre el que se encuentra el monto de las transacciones asociadas a una determinada wallet, es decir, el monto mas bajo y el más alto.
+                    Obtiene el rango entre el que se encuentra el monto de las transacciones asociadas a una determinada
+                    wallet, es decir, el monto mas bajo y el más alto.
                 </p>
                 <br>
             </li>
